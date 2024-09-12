@@ -1051,8 +1051,8 @@ Header style
 .navbar .container, .navbar .container-fluid {
   position: relative;
   margin-right: 280px; 
-  margin-top: 25px;
-  margin-bottom: 25px;}
+  margin-top: 0px;
+  margin-bottom: 0px;}
 
 .navbar .navbar-nav .nav-link {
   text-transform: uppercase;
@@ -1063,6 +1063,7 @@ Header style
   border-top: 2px solid transparent;
   cursor: pointer;
    }
+
 
 
 .navbar-light.navbar .navbar-nav .nav-link {
@@ -1124,7 +1125,7 @@ Dropdown menu styles
   background-color: #fff;
   border: 0px;
   padding: 1rem .0rem;
-  border-radius: 0px;
+  border-radius: 10px;
   margin: 0px; }
 
 .dropdown-menu .dropdown-item {
@@ -1534,7 +1535,8 @@ Footer style
     position: relative; }
   .navbar-toggler {
     position: absolute;
-    right: 15px;
+    margin-left: 40vh;
+    margin-top: 50px;
     background-image: none;
     border: 0px;
     padding: 0px;
