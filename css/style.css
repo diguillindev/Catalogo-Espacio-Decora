@@ -29,6 +29,15 @@ body {
   .container {
     width: 1070px; } }
 
+
+    .disabled-link {
+      pointer-events: none; /* Desactiva los eventos del ratón, haciéndolo no clicable */
+      cursor: default;      /* Cambia el cursor a uno no interactivo */
+      color: inherit;       /* Mantiene el color original del enlace */
+      text-decoration: none; /* Elimina el subrayado del enlace */
+  }
+  
+    
 button, input, optgroup, select, textarea {
   font-family: "Lato", sans-serif; }
 
@@ -380,8 +389,8 @@ strong, b {
   -webkit-radius: 5px;
   bottom: 10px;
   right: 10px;
-  background: linear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
-  background: -webkitlinear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
+  
+  background-color: #1c1c1d;
   color: #fff;
   line-height: 50px;
   opacity: 0;
@@ -1050,7 +1059,8 @@ Header style
 */
 .navbar .container, .navbar .container-fluid {
   position: relative;
-  margin-right: 280px; 
+  height: 90px;
+  margin-right: 400px; 
   margin-top: 0px;
   margin-bottom: 0px;}
 
@@ -1228,7 +1238,7 @@ Parallax backgrounds
     line-height: 60px;
     font-weight: 500; }
   .parallax-fullscreen .parallax-overlay {
-    opacity: 0.9; }
+    opacity: 2.9; }
 
 .hero-form {
   padding: 40px 20px;
@@ -1239,6 +1249,136 @@ Parallax backgrounds
 /*
 Cards features,  icons, images, teams etc.
 */
+
+/*galery*/
+tbody {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Contenedor de la galería */
+.surfaces-slider.surfaces {
+  list-style: none;
+  padding: 0;
+  max-width: 100%;
+  display: flex;
+  
+  margin: 0 auto;
+  margin-top: 0px;
+  overflow: hidden; /* Ocultar la barra de desplazamiento */
+  scroll-behavior: smooth; /* Deslizamiento suave */
+  position: sticky;
+  width: 1080px; /* Tamaño del contenedor para mostrar 3 elementos de 400px
+   cada uno */
+  height: 500px;
+}
+
+.surfaces-slider.surfaces li {
+  margin-right: 0.7rem; /* Espaciado entre elementos */
+}
+
+/* Elimina el margen derecho del último elemento para evitar el espacio extra al final */
+.surfaces-slider.surfaces li:last-child {
+  margin-right: 20px;
+}
+
+/* Estilos para las flechas de navegación al estilo de Facebook */
+.arrow {
+  position: absolute;
+  top: 54%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* Fondo más sutil */
+  color: rgba(255, 255, 255, 0);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 24px; /* Tamaño del icono */
+  z-index: 10;
+  border-radius: 50%; /* Bordes redondeados para un estilo más moderno */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow.left {
+  left: 90px;
+}
+
+
+.arrow.right {
+  right: 70px;
+}
+
+/* Añadir iconos de flechas con Font Awesome */
+.arrow::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/chevron-left.svg') no-repeat center center;
+  background-size: 16px 16px;
+}
+
+.arrow.right::before {
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/chevron-right.svg') no-repeat center center;
+}
+
+
+/* Ocultar subtítulo extra */
+.surfaces-slider.surfaces .surface h4 {
+  display: relative; /* Elimina el subtítulo */
+  padding-top: 60vh;
+}
+
+/* Posicionar título centrado en la imagen */
+.surfaces-slider.surfaces .surface {
+  position: relative; /* Contenedor relativo para alinear el título */
+  margin-top: 1vh;
+  flex-shrink: 0;
+  width: 350px; /* Ancho fijo para cada elemento (ajustado para que quepan 3) */
+}
+
+.surfaces-slider.surfaces .surface img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Posicionamos el span del título dentro de la imagen */
+.surfaces-slider.surfaces .surface a {
+  position: relative;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.surfaces-slider.surfaces .surface a span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  transform: translate(-50%, -50%); /* Centramos horizontal y verticalmente */
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0); /* Fondo semitransparente */
+  padding-top: 70px;
+  border-radius: 0px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .arrow {
+    top: 452%;
+    padding-left: -150px;
+  }
+  
+}
+
 .feature-icon i {
   font-size: 2rem;
   width: 5rem;
@@ -1250,7 +1390,7 @@ Cards features,  icons, images, teams etc.
   display: block;
   border-radius: 50%;
   -webkit-border-radius: 50%;
-  color: #fff;
+  color: #0c0c0c;
   margin: 0 auto;
   margin-bottom: 40px; }
 
@@ -1444,8 +1584,9 @@ Parallax backgrounds
     z-index: 3; }
 
 .parallax-overlay {
-  background: linear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
-  background: -webkitlinear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
+ /* background: linear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
+  background: -webkitlinear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);*/
+  background-color: #F6F7FC;
   position: absolute;
   left: 0;
   top: 0;
@@ -1501,6 +1642,7 @@ Footer style
         color: #000; }
 
 @media (min-width: 992px) {
+  
   .footer {
     position: fixed;
     left: 0;
