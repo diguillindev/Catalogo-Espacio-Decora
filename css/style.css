@@ -814,9 +814,12 @@ Buttons
 SOCIAL BUTTONS
 
 **********************/
-/**social icons default size**/
+.social-buttons {
+  text-align: center; /* Centra el botón */
+}
+
 .social-icon {
-  margin: 0 5px 5px 0;
+  margin: 0 auto; /* Centra el botón horizontalmente */
   width: 40px;
   height: 40px;
   font-size: 20px;
@@ -826,12 +829,14 @@ SOCIAL BUTTONS
   border-radius: 3px;
   overflow: hidden;
   display: block;
-  float: left;
+  /* float: left; */ /* Elimina el float para el centrado */
   text-align: center;
-  border: 1px solid #AAA; }
+  border: 1px solid #AAA;
+}
 
 .social-icon:hover {
-  border-color: transparent; }
+  border-color: transparent;
+}
 
 .social-icon i {
   display: block;
@@ -840,81 +845,17 @@ SOCIAL BUTTONS
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   line-height: 40px;
-  position: relative; }
+  position: relative;
+}
 
 .social-icon i:last-child {
-  color: #FFF !important; }
+  color: #FFF !important;
+}
 
 .social-icon:hover i:first-child {
-  margin-top: -40px; }
+  margin-top: -40px;
+}
 
-/***social icons lg (big)***/
-.social-icon-lg {
-  margin: 0 5px 5px 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  line-height: 60px !important;
-  color: #555;
-  text-shadow: none;
-  border-radius: 3px;
-  overflow: hidden;
-  display: block;
-  float: left;
-  text-align: center;
-  border: 1px solid #AAA; }
-
-.social-icon-lg:hover {
-  border-color: transparent; }
-
-.social-icon-lg i {
-  display: block;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  line-height: 60px;
-  position: relative; }
-
-.social-icon-lg i:last-child {
-  color: #FFF !important; }
-
-.social-icon-lg:hover i:first-child {
-  margin-top: -60px; }
-
-/***social icons small***/
-.social-icon-sm {
-  margin: 0 5px 5px 0;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  line-height: 30px !important;
-  color: #555;
-  text-shadow: none;
-  border-radius: 3px;
-  overflow: hidden;
-  display: block;
-  float: left;
-  text-align: center;
-  border: 1px solid #AAA; }
-
-.social-icon-sm:hover {
-  border-color: transparent; }
-
-.social-icon-sm i {
-  display: block;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  line-height: 30px;
-  position: relative; }
-
-.social-icon-sm i:last-child {
-  color: #FFF !important; }
-
-.social-icon-sm:hover i:first-child {
-  margin-top: -30px; }
 
 si-border {
   border: 1px solid #AAA !important; }
@@ -1578,7 +1519,7 @@ Parallax backgrounds
       padding-bottom: 2px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.3); }
       .bg-parallax .custom-control-description a:hover {
-        border-bottom-color: rgba(255, 255, 255, 0.8); }
+        border-bottom-color: #c7c4c4cc; }
   .bg-parallax .container {
     position: relative;
     z-index: 3; }
@@ -1586,7 +1527,7 @@ Parallax backgrounds
 .parallax-overlay {
  /* background: linear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);
   background: -webkitlinear-gradient(215deg, #4a90e2 0%, #9c51f5 70%, #b88ee7 100%);*/
-  background-color: #F6F7FC;
+  background-color: #68696e8c;
   position: absolute;
   left: 0;
   top: 0;
@@ -1617,8 +1558,8 @@ Tweeter feeds style
 Footer style
 */
 .footer {
-  padding-top: 90px;
-  padding-bottom: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #fff; }
   .footer h5 {
     font-family: "Lato", sans-serif;
